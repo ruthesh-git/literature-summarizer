@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+
+# Streamlit
+.streamlit/
+
+# FAISS / vector stores
+*.faiss
+*.index
+
+# OS / Editor
+.DS_Store
+.vscode/
+
+# Secrets
+.env
