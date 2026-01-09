@@ -1,24 +1,21 @@
----
-
-```md
 📚 Literature Summarizer — AI-Powered PDF Analysis App
 
 A production-ready, local AI application that enables users to upload academic or technical PDFs, generate concise summaries, and ask semantic questions over document content.
 
-Built with **LangChain**, **FAISS**, **Ollama**, and **Streamlit**, this project demonstrates end-to-end LLM application development — from document ingestion and embeddings to retrieval-augmented generation (RAG) and UI deployment.
+Built with LangChain, FAISS, Ollama, and Streamlit, this project demonstrates end-to-end LLM application development — from document ingestion and embeddings to retrieval-augmented generation (RAG) and UI deployment.
 
----
+
 
 🚀 Project Highlights
 
-- End-to-end **RAG (Retrieval-Augmented Generation)** pipeline
-- Fully **local LLM inference** (no external LLM APIs)
+- End-to-end RAG (Retrieval-Augmented Generation) pipeline
+- Fully local LLM inference (no external LLM APIs)
 - Scalable document chunking and vector indexing
 - Real-time semantic question answering
 - Clean, reproducible Python environment design
 - Production-oriented dependency and model management
 
----
+
 
 🧠 Architecture Overview
 
@@ -30,14 +27,14 @@ Ollama LLM
 ↓
 Summary Generation & QA Responses
 
-````
+```
 
 Key Design Decisions
-- **FAISS** for fast vector similarity search
-- **Ollama embeddings** for local semantic indexing
-- **LangChain chains** for modular orchestration
-- **Streamlit** for rapid, interactive UI development
-- **Virtual environments + pinned dependencies** for reproducibility
+- FAISS for fast vector similarity search
+- Ollama embeddings for local semantic indexing
+- LangChain chains for modular orchestration
+- Streamlit for rapid, interactive UI development
+- Virtual environments + pinned dependencies for reproducibility
 
 ---
 
@@ -70,11 +67,12 @@ Key Design Decisions
 
 📦 Requirements
 
-#System
-- Python **3.11** (required)
+System
+- Python 3.11 (required)
 - Ollama installed and running
 
-#Ollama Models
+=> Ollama Models:
+
 ```bash
 ollama pull nomic-embed-text
 ollama pull llama3
@@ -126,7 +124,7 @@ streamlit run litSummerisator.py
 🧠 What This Project Demonstrates
 
 * Practical application of "LLMs" in real systems
-* Building **RAG pipelines from scratch**
+* Building RAG pipelines from scratch
 * Handling large documents efficiently
 * Local AI deployment strategies
 * Debugging complex Python environments
@@ -159,6 +157,3 @@ AI / ML Engineer | Python Developer
 🔗 LinkedIn: [https://www.linkedin.com/in/ruthesh-medaboina-677b822a7/]
 
 ```
-
----
-
