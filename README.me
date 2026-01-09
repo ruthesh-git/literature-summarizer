@@ -1,10 +1,10 @@
 📚 Literature Summarizer — AI-Powered PDF Analysis App
 
-A production-ready, local AI application that enables users to upload academic or technical PDFs, generate concise summaries, and ask semantic questions over document content.
+A production-ready, local AI application that enables users to upload academic or technical PDF documents, generate concise summaries, and ask semantic questions over the document content.
 
 Built with LangChain, FAISS, Ollama, and Streamlit, this project demonstrates end-to-end LLM application development — from document ingestion and embeddings to retrieval-augmented generation (RAG) and UI deployment.
 
-
+---
 
 🚀 Project Highlights
 
@@ -15,23 +15,30 @@ Built with LangChain, FAISS, Ollama, and Streamlit, this project demonstrates en
 - Clean, reproducible Python environment design
 - Production-oriented dependency and model management
 
-
+---
 
 🧠 Architecture Overview
 
 ```
 
-PDF → Text Extraction → Chunking → Embeddings → FAISS Index
-↓
+PDF
+└─▶ Text Extraction
+└─▶ Chunking
+└─▶ Embeddings
+└─▶ FAISS Vector Index
+│
+▼
 Ollama LLM
-↓
+│
+▼
 Summary Generation & QA Responses
 
-```
+````
 
-Key Design Decisions
-- FAISS for fast vector similarity search
-- Ollama embeddings for local semantic indexing
+-> Key Design Decisions
+
+- FAISS for fast and efficient vector similarity search
+- Ollama embeddings for fully local semantic indexing
 - LangChain chains for modular orchestration
 - Streamlit for rapid, interactive UI development
 - Virtual environments + pinned dependencies for reproducibility
@@ -54,12 +61,12 @@ Key Design Decisions
 🧰 Tech Stack
 
 | Category | Tools |
-|-------|------|
+|--------|------|
 | Language | Python 3.11 |
 | LLM Orchestration | LangChain (0.1.x) |
-| Vector DB | FAISS |
+| Vector Database | FAISS |
 | Local LLMs | Ollama |
-| UI | Streamlit |
+| UI Framework | Streamlit |
 | PDF Parsing | pdfplumber |
 | Translation | AWS Translate (boto3) |
 
@@ -67,37 +74,59 @@ Key Design Decisions
 
 📦 Requirements
 
-System
+-> System Requirements
 - Python 3.11 (required)
 - Ollama installed and running
 
-=> Ollama Models:
+-> Required Ollama Models
 
 ```bash
 ollama pull nomic-embed-text
 ollama pull llama3
 ````
 
-> Models are intentionally excluded from version control.
+> ℹ️ Ollama models are intentionally excluded from version control.
 
 ---
 
-⚙️ Setup & Installation
+ ⚙️ Setup & Installation
 
 ```bash
-git clone https://github.com/<your-username>/literature-summarizer.git
+git clone https://github.com/ruthesh-git/literature-summarizer.git
 cd literature-summarizer
 
 python -m venv .venv
-.venv\Scripts\activate   # Windows
+```
+
+-> Activate the virtual environment
+
+Windows
+
+```powershell
+.venv\Scripts\activate
+```
+
+macOS / Linux
+
+```bash
+source .venv/bin/activate
+```
+
+-> Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-Run the application:
+---
+
+▶️ Run the Application
 
 ```bash
 streamlit run litSummerisator.py
 ```
+
+The app will open automatically in your browser.
 
 ---
 
@@ -107,28 +136,28 @@ streamlit run litSummerisator.py
 2. Generate a concise summary
 3. Ask semantic follow-up questions
 4. Translate summaries if required
-5. Download results
+5. Download results as a text file
 
 ---
 
 🔐 Engineering Practices
 
-* Clean `.gitignore` (no models, venvs, or secrets)
-* Pinned dependency versions
-* Local inference for privacy & cost control
-* Modular code structure
+* Clean `.gitignore` (no models, venvs, or secrets committed)
+* Pinned dependency versions for stability
+* Local inference for privacy and cost control
+* Modular and readable code structure
 * Platform-agnostic setup
 
 ---
 
 🧠 What This Project Demonstrates
 
-* Practical application of "LLMs" in real systems
+* Practical application of LLMs in real-world systems
 * Building RAG pipelines from scratch
-* Handling large documents efficiently
+* Efficient handling of large documents
 * Local AI deployment strategies
 * Debugging complex Python environments
-* Windows-specific ML tooling challenges and solutions
+* Solving Windows-specific ML tooling challenges
 
 ---
 
@@ -138,22 +167,24 @@ streamlit run litSummerisator.py
 * Conversational memory improvements
 * Dockerized deployment
 * Migration to modern LangChain LCEL
+* Performance optimization for large PDFs
 
 ---
 
 📜 License
 
 This project is intended for educational and portfolio purposes.
-Feel free to fork and extend.
+Feel free to fork, modify, and extend.
 
 ---
 
 👤 Author
-Ruthesh Medaboina
-AI / ML Engineer | Python Developer
+
+-Ruthesh Medaboina
+Java Full-Stack Developer | AI / ML Engineer | Python Developer | Cloud Engineer
 
 📧 Email: [ruth.dev.v1@gmail.com](mailto:ruth.dev.v1@gmail.com)
-🔗 GitHub: [https://github.com/ruthesh-git]
-🔗 LinkedIn: [https://www.linkedin.com/in/ruthesh-medaboina-677b822a7/]
+🔗 GitHub: [https://github.com/ruthesh-git](https://github.com/ruthesh-git)
+🔗 LinkedIn: [https://www.linkedin.com/in/ruthesh-medaboina-677b822a7/](https://www.linkedin.com/in/ruthesh-medaboina-677b822a7/)
 
 ```
